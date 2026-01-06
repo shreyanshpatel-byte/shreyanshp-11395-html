@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Element Manipulation</title>
+</head>
+<body>
+
+<h2>Dynamic List Example</h2>
+
+<button onclick="addItem()">Add Item</button>
+<button onclick="removeItem()">Remove Last Item</button>
+<button onclick="modifyItem()">Modify First Item</button>
+
+<ul id="list">
+    <li>Item 1</li>
+</ul>
+
+<script>
+    // Append (create & add element)
+    function addItem() {
+        let li = document.createElement("li");
+        li.innerHTML = "New Item";
+        document.getElementById("list").appendChild(li);
+    }
+
+    // Remove last child
+    function removeItem() {
+        let list = document.getElementById("list");
+        if (list.children.length > 0) {
+            list.removeChild(list.lastElementChild);
+        }
+    }
+
+    // Modify first child
+    function modifyItem() {
+        let list = document.getElementById("list");
+        if (list.children.length > 0) {
+            list.firstElementChild.innerHTML = "Modified Item";
+        }
+    }
+</script>
+
+</body>
+</html>

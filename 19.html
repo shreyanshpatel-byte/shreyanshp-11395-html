@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Drawing Example</title>
+</head>
+<body>
+
+<h2>Canvas Drawing: Shapes & Colors</h2>
+
+<canvas id="myCanvas" width="400" height="250" style="border:1px solid black;"></canvas>
+
+<script>
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+
+    // Draw rectangle
+    ctx.fillStyle = "skyblue";
+    ctx.fillRect(20, 20, 120, 80);
+
+    // Draw circle
+    ctx.beginPath();
+    ctx.arc(220, 60, 40, 0, 2 * Math.PI);
+    ctx.fillStyle = "orange";
+    ctx.fill();
+
+    // Draw line
+    ctx.beginPath();
+    ctx.moveTo(50, 150);
+    ctx.lineTo(350, 150);
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // Draw text
+    ctx.fillStyle = "green";
+    ctx.font = "20px Arial";
+    ctx.fillText("Hello Canvas", 120, 220);
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Drawing Example</title>
+</head>
+<body>
+
+<h2>Canvas Drawing: Shapes & Colors</h2>
+
+<canvas id="myCanvas" width="400" height="250" style="border:1px solid black;"></canvas>
+
+<script>
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+
+    // Draw rectangle
+    ctx.fillStyle = "skyblue";
+    ctx.fillRect(20, 20, 120, 80);
+
+    // Draw circle
+    ctx.beginPath();
+    ctx.arc(220, 60, 40, 0, 2 * Math.PI);
+    ctx.fillStyle = "orange";
+    ctx.fill();
+
+    // Draw line
+    ctx.beginPath();
+    ctx.moveTo(50, 150);
+    ctx.lineTo(350, 150);
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // Draw text
+    ctx.fillStyle = "green";
+    ctx.font = "20px Arial";
+    ctx.fillText("Hello Canvas", 120, 220);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listeners Demo</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>addEventListener & removeEventListener Demo</h2>
+
+<button id="addBtn">Add Mouse Event</button>
+<button id="removeBtn">Remove Mouse Event</button>
+
+<div id="box">Hover Me</div>
+
+<p id="keyOutput"></p>
+
+<script>
+    let box = document.getElementById("box");
+    let addBtn = document.getElementById("addBtn");
+    let removeBtn = document.getElementById("removeBtn");
+
+    // Mouse event function
+    function changeColor() {
+        box.style.backgroundColor = "orange";
+        box.innerHTML = "Mouse Over!";
+    }
+
+    // Add mouse event
+    addBtn.addEventListener("click", function () {
+        box.addEventListener("mouseover", changeColor);
+        alert("Mouseover event added");
+    });
+
+    // Remove mouse event
+    removeBtn.addEventListener("click", function () {
+        box.removeEventListener("mouseover", changeColor);
+        box.style.backgroundColor = "lightgreen";
+        box.innerHTML = "Hover Me";
+        alert("Mouseover event removed");
+    });
+
+    // Keyboard event
+    document.addEventListener("keydown", function (event) {
+        document.getElementById("keyOutput").innerHTML =
+            "Key pressed: " + event.key;
+    });
+</script>
+
+</body>
+</html>

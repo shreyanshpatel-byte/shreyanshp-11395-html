@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions and Scope in JavaScript</title>
+</head>
+<body>
+
+<h2>User-Defined Functions & Variable Scope</h2>
+
+<script>
+    // User-defined function
+    function addNumbers(a, b) {
+        return a + b;
+    }
+
+    // Invoking the function
+    let sum = addNumbers(10, 20);
+    document.write("Sum using function: " + sum + "<br><br>");
+
+    // Global scope (var)
+    var x = 10;
+
+    function scopeDemo() {
+        // Function scope
+        var a = 5;
+        let b = 15;
+        const c = 25;
+
+        document.write("Inside function:<br>");
+        document.write("var a = " + a + "<br>");
+        document.write("let b = " + b + "<br>");
+        document.write("const c = " + c + "<br><br>");
+
+        if (true) {
+            var a = 50;     // var has function scope
+            let b = 150;    // let has block scope
+            const c = 250;  // const has block scope
+
+            document.write("Inside block:<br>");
+            document.write("var a = " + a + "<br>");
+            document.write("let b = " + b + "<br>");
+            document.write("const c = " + c + "<br><br>");
+        }
+
+        document.write("After block:<br>");
+        document.write("var a = " + a + "<br>");
+        document.write("let b = " + b + "<br>");
+        document.write("const c = " + c + "<br><br>");
+    }
+
+    // Invoke function
+    scopeDemo();
+
+    document.write("Global var x = " + x);
+</script>
+
+</body>
+</html>
